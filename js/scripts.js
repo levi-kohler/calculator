@@ -30,4 +30,20 @@ $(document).ready(function() {
     const result = subtract(number1, number2);
     $("#subtract-output").text(result);
   });
+
+  $("form#multiply").submit(function(event) {
+    event.preventDefault();
+    const number1 = parseInt($("#multiply1").val());
+    const number2 = parseInt($("#multiply2").val());
+    const result = multiply(number1, number2);
+    $("#multiply-output").text(result);
+  });
+
+  $("form#divide").submit(function(event) {
+    event.preventDefault();
+    const number1 = parseInt($("#divide1").val());
+    const number2 = parseInt($("#divide2").val());
+    const result = divide(number1, number2);
+    $("#divide-output").text(result);
+  });
 });
